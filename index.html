@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Joke Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            text-align: center;
+            padding-top: 15%;
+        }
+        h1 { color: #58a6ff; }
+        #joke-display {
+            font-size: 24px;
+            margin: 30px;
+            padding: 20px;
+            min-height: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #238636;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        button:hover { background-color: #2ea043; }
+    </style>
+</head>
+<body>
+
+    <h1>🤖 The Tech Joke Generator</h1>
+    <div id="joke-display">Click the button for a laugh!</div>
+    <button onclick="generateJoke()">Tell me a joke</button>
+
+    <script>
+        const jokes = [
+            "Why do programmers prefer dark mode? Because light attracts bugs.",
+            "I told my computer I needed a break... now it won't stop sending me Kit-Kats.",
+            "Why did the developer go broke? Because he used up all his cache.",
+            "There are 10 types of people in the world: those who understand binary, and those who don't.",
+            "A SQL query goes into a bar, walks up to two tables and asks... 'Can I join you?'",
+            "How many programmers does it take to change a light bulb? None, that's a hardware problem."
+        ];
+
+        function generateJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById('joke-display').innerText = jokes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
